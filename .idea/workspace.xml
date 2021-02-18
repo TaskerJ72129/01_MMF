@@ -23,11 +23,21 @@
       <file leaf-file-name="00_MMF_base.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/00_MMF_base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+            <state relative-caret-position="135">
+              <caret line="82" column="16" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
               <folding>
-                <marker date="1613085481751" expanded="false" signature="106:346" ph="..." />
+                <element signature="e#111#349#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="04_ticke_price.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/04_ticke_price.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -45,7 +55,7 @@
       <file leaf-file-name="02_ticket_loop_v2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/02_ticket_loop_v2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
+            <state relative-caret-position="424">
               <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
               <folding />
             </state>
@@ -58,9 +68,7 @@
             <state relative-caret-position="119">
               <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding>
-                <marker date="1613083230831" expanded="false" signature="66:558" ph="..." />
-                <marker date="1613083230831" expanded="true" signature="210:558" ph="..." />
-                <marker date="1613083230831" expanded="true" signature="276:448" ph="..." />
+                <element signature="e#72#560#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -117,6 +125,7 @@
         <option value="$PROJECT_DIR$/02_ticket_loop_v2.py" />
         <option value="$PROJECT_DIR$/03_number_checker.py" />
         <option value="$PROJECT_DIR$/03_number_checker_v2.py" />
+        <option value="$PROJECT_DIR$/04_ticke_price.py" />
         <option value="$PROJECT_DIR$/00_MMF_base.py" />
       </list>
     </option>
@@ -151,6 +160,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -171,8 +182,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -183,24 +192,7 @@
       <recent name="C:\Users\Taskerj72129\OneDrive - Massey High School\Old School Files\Documents\COM_201\01_MMF" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.03_number_checker_v2">
-    <configuration default="false" name="02_ticket_loop" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="01_MMF" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/02_ticket_loop.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.00_MMF_base">
     <configuration default="false" name="02_ticket_loop_v2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -265,6 +257,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="01_MMF" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/03_number_checker_v2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="04_ticke_price" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="01_MMF" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/04_ticke_price.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -404,24 +413,27 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.02_ticket_loop" />
-      <item index="1" class="java.lang.String" itemvalue="Python.02_ticket_loop_v2" />
-      <item index="2" class="java.lang.String" itemvalue="Python.00_MMF_base" />
-      <item index="3" class="java.lang.String" itemvalue="Python.03_number_checker" />
-      <item index="4" class="java.lang.String" itemvalue="Python.03_number_checker_v2" />
+      <item index="0" class="java.lang.String" itemvalue="Python.02_ticket_loop_v2" />
+      <item index="1" class="java.lang.String" itemvalue="Python.00_MMF_base" />
+      <item index="2" class="java.lang.String" itemvalue="Python.03_number_checker" />
+      <item index="3" class="java.lang.String" itemvalue="Python.03_number_checker_v2" />
+      <item index="4" class="java.lang.String" itemvalue="Python.04_ticke_price" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.00_MMF_base" />
-        <item index="1" class="java.lang.String" itemvalue="Python.03_number_checker_v2" />
-        <item index="2" class="java.lang.String" itemvalue="Python.03_number_checker" />
-        <item index="3" class="java.lang.String" itemvalue="Python.02_ticket_loop_v2" />
-        <item index="4" class="java.lang.String" itemvalue="Python.02_ticket_loop" />
+        <item index="1" class="java.lang.String" itemvalue="Python.04_ticke_price" />
+        <item index="2" class="java.lang.String" itemvalue="Python.03_number_checker_v2" />
+        <item index="3" class="java.lang.String" itemvalue="Python.03_number_checker" />
+        <item index="4" class="java.lang.String" itemvalue="Python.02_ticket_loop_v2" />
       </list>
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -435,7 +447,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3611691" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -477,7 +489,67 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1613085481751" expanded="false" signature="106:346" ph="..." />
+            <element signature="e#111#349#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02_ticket_loop.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02_ticket_loop_v2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03_number_checker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="e#72#560#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03_number_checker_v2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01_name not_blank.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01_name not_blank_v2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/00_MMF_base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#111#349#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -519,7 +591,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1613085481751" expanded="false" signature="106:346" ph="..." />
+            <element signature="e#111#349#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -540,10 +612,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01_name not_blank_v2.py">
+    <entry file="file://$PROJECT_DIR$/03_number_checker_v2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+        <state relative-caret-position="51">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -556,23 +628,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/03_number_checker.py">
+    <entry file="file://$PROJECT_DIR$/01_name not_blank_v2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <marker date="1613083230831" expanded="false" signature="66:558" ph="..." />
-            <marker date="1613083230831" expanded="true" signature="210:558" ph="..." />
-            <marker date="1613083230831" expanded="true" signature="276:448" ph="..." />
-          </folding>
+        <state relative-caret-position="289">
+          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/02_ticket_loop_v2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
+        <state relative-caret-position="424">
           <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03_number_checker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="e#72#560#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -584,20 +662,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/03_number_checker_v2.py">
+    <entry file="file://$PROJECT_DIR$/04_ticke_price.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+        <state relative-caret-position="186">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/00_MMF_base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+        <state relative-caret-position="135">
+          <caret line="82" column="16" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
           <folding>
-            <marker date="1613085481751" expanded="false" signature="106:346" ph="..." />
+            <element signature="e#111#349#0" expanded="false" />
           </folding>
         </state>
       </provider>
