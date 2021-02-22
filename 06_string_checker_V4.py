@@ -15,7 +15,8 @@ def string_check(choice, options):
             break
 
         # if the chosen option is not valid, set in_valid to no
-        else: is_valid = "no"
+        else:
+            is_valid = "no"
 
     # if the snacks is not OK - ask question again.
     if is_valid == "yes":
@@ -38,11 +39,11 @@ valid_snacks = [
 yes_no = [
     ["yes", "y"],
     ["no", "n"]
-
 ]
 
 # holds snack order for a single user
 snack_order = []
+
 # ask user if they want a snack
 check_snack = "invalid choice"
 while check_snack == "invalid choice":
@@ -63,7 +64,7 @@ if check_snack == "Yes":
 
         # check if snack is valid
         snack_choice = string_check(desired_snack, valid_snacks)
-        print("Smack Choice: ", snack_choice)
+        print("Snack Choice: ", snack_choice)
 
         # add snack to list..
 
