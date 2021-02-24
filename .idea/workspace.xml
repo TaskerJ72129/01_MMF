@@ -65,18 +65,38 @@
       <file leaf-file-name="06_string_checker_V3.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/06_string_checker_V3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
+            <state relative-caret-position="493">
               <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="06_string_checker_V4.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="06_string_checker_V4.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/06_string_checker_V4.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="61" column="34" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
+            <state relative-caret-position="161">
+              <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="06_string_checker_V5.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/06_string_checker_V5.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1513">
+              <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="07_string_analyser.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/07_string_analyser.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="237">
+              <caret line="27" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -98,28 +118,6 @@
             <state relative-caret-position="204">
               <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="02_ticket_loop_v2.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/02_ticket_loop_v2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="03_number_checker.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/03_number_checker.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding>
-                <element signature="e#72#560#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -152,6 +150,8 @@
         <option value="$PROJECT_DIR$/06_string_checker_V2.py" />
         <option value="$PROJECT_DIR$/06_string_checker_V3.py" />
         <option value="$PROJECT_DIR$/06_string_checker_V4.py" />
+        <option value="$PROJECT_DIR$/07_string_analyser.py" />
+        <option value="$PROJECT_DIR$/06_string_checker_V5.py" />
       </list>
     </option>
   </component>
@@ -185,7 +185,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -207,6 +206,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -217,41 +217,7 @@
       <recent name="C:\Users\Taskerj72129\OneDrive - Massey High School\Old School Files\Documents\COM_201\01_MMF" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.06_string_checker_V4">
-    <configuration default="false" name="00_MMF_base" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="01_MMF" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/00_MMF_base.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="04_ticke_price" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="01_MMF" />
-      <option name="SCRIPT_NAME" value="C:\Users\Taskerj72129\OneDrive - Massey High School\Old School Files\Documents\COM_201\01_MMF\04_ticket_price.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.06_string_checker_V5">
     <configuration default="false" name="06_string_checker_V2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -299,6 +265,40 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="01_MMF" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/06_string_checker_V4.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="07_string_analyser" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="01_MMF" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/07_string_analyser.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="06_string_checker_V5" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="01_MMF" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/06_string_checker_V5.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -438,19 +438,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.00_MMF_base" />
-      <item index="1" class="java.lang.String" itemvalue="Python.04_ticke_price" />
-      <item index="2" class="java.lang.String" itemvalue="Python.06_string_checker_V2" />
-      <item index="3" class="java.lang.String" itemvalue="Python.06_string_checker_V3" />
-      <item index="4" class="java.lang.String" itemvalue="Python.06_string_checker_V4" />
+      <item index="0" class="java.lang.String" itemvalue="Python.06_string_checker_V2" />
+      <item index="1" class="java.lang.String" itemvalue="Python.06_string_checker_V3" />
+      <item index="2" class="java.lang.String" itemvalue="Python.06_string_checker_V4" />
+      <item index="3" class="java.lang.String" itemvalue="Python.07_string_analyser" />
+      <item index="4" class="java.lang.String" itemvalue="Python.06_string_checker_V5" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.06_string_checker_V4" />
-        <item index="1" class="java.lang.String" itemvalue="Python.06_string_checker_V3" />
-        <item index="2" class="java.lang.String" itemvalue="Python.06_string_checker_V2" />
-        <item index="3" class="java.lang.String" itemvalue="Python.00_MMF_base" />
-        <item index="4" class="java.lang.String" itemvalue="Python.04_ticke_price" />
+        <item index="0" class="java.lang.String" itemvalue="Python.06_string_checker_V5" />
+        <item index="1" class="java.lang.String" itemvalue="Python.07_string_analyser" />
+        <item index="2" class="java.lang.String" itemvalue="Python.06_string_checker_V4" />
+        <item index="3" class="java.lang.String" itemvalue="Python.06_string_checker_V3" />
+        <item index="4" class="java.lang.String" itemvalue="Python.06_string_checker_V2" />
       </list>
     </recent_temporary>
   </component>
@@ -511,22 +511,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/02_ticket_loop.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/02_ticket_loop_v2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/03_number_checker.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -541,7 +525,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -624,7 +607,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -690,7 +672,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -748,7 +729,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -789,7 +769,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -814,7 +793,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -836,7 +814,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -911,7 +888,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/06_string_checker_V3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
+        <state relative-caret-position="493">
           <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
           <folding />
         </state>
@@ -919,8 +896,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/06_string_checker_V4.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="61" column="34" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
+        <state relative-caret-position="161">
+          <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07_string_analyser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="27" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/06_string_checker_V5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1513">
+          <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
           <folding />
         </state>
       </provider>
