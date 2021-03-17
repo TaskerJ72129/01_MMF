@@ -5,6 +5,31 @@ import pandas
 
 # functions go here
 
+# String check
+def string_check(choice, options):
+
+    for var_list in options:
+
+        # if the snack is in one of the lists, return the full name
+        if choice in var_list:
+
+            # Get full name of snack and put it
+            # in title case so it looks nice when outputted
+            chosen = var_list[0].title()
+            is_valid = "yes"
+            break
+
+        # if the chosen option is not valid, set in_valid to no
+        else:
+            is_valid = "no"
+
+    # if the snacks is not OK - ask question again.
+    if is_valid == "yes":
+        return chosen
+    else:
+        print("Please enter a valid option\n")
+        return "invalid choice"
+
 # checks that ticket name is not blank
 def not_blank(question):
     valid = False
@@ -87,6 +112,11 @@ yes_no = [
     ["no", "n"]
 ]
 
+# list of valid responses for payment method
+pay_method = [
+    ["cash", "ca"],
+    ["credit", "cr"]
+]
 # used program before?
 
 # loop
@@ -99,14 +129,32 @@ ticket_sales = 0
 # Initialise lists (to make data-frame in due course)
 all_names = []
 all_tickets = []
+popcorn = []
+mms = []
+pita_chips = []
+water = []
+orange_juice = []
 
 
 # Data Frame Dictionary
 movie_data_dict = {
     'Name': all_names,
-    'Ticket': all_tickets
+    'Ticket': all_tickets,
+    'Popcorn': popcorn,
+    'Water': water,
+    'Pita Chips': pita_chips,
+    'M&Ms': mms,
+    'Orange Juice': orange_juice,
 }
 
+# cost of each snack
+price_dict = {
+    'Popcorn': 2.5,
+    'Water': 2,
+    'Pita Chips': 4.5,
+    'M&Ms': 3,
+    'Orange Juice': 3.25
+}
 
 # Ask user if they have used program before & show instructions
 
@@ -141,6 +189,16 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
     # Get snacks
 
     # Get payment method (ie: work out if surcharge is needed)
+    # Ask for payment method
+    how_pay = "invalid choice"
+    while how_pay == "invalid choice":
+        how_pay = input("Please choose a payment method (cash or credit)? ").lower()
+        how_pay = string_check(how_pay, pay_method)
+
+    if how_pay == "Credit":
+        surcharge_multiplier = 0.05
+    else:
+        surcharge = 0
 
 # End of tickets loop / snacks / payment loop
 

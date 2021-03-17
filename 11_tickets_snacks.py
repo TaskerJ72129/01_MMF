@@ -16,29 +16,29 @@ snack_lists = [popcorn, mms, pita_chips, water, orange_juice]
 # Data Frame Dictionary
 movie_data_dict = {
     'Name': all_names,
-    'Ticket': all_tickets,
-    'Popcorn': popcorn,
-    'Water' : water,
-    'Pita Chips' : pita_chips,
-    'M&Ms' : mms,
-    'Orange Juice': orange_juice,
+    'aTicket': all_tickets,
+    'bPopcorn': popcorn,
+    'cWater': water,
+    'dPita Chips': pita_chips,
+    'eM&Ms': mms,
+    'fOrange Juice': orange_juice,
 }
 
 # cost of each snack
 price_dict = {
-    'Popcorn': 2.5,
-    'Water' : 2,
-    'Pita Chips' : 4.5,
-    'M&Ms' : 3,
-    'Orange Juice': 3.25,
+    'bPopcorn': 2.5,
+    'cWater': 2,
+    'dPita Chips': 4.5,
+    'eM&Ms': 3,
+    'fOrange Juice': 3.25,
 }
 
 test_data = [
-    [[2, 'Popcorn'], [1, 'Pita Chips'], [1, 'Orange Juice']],
+    [[2, 'bPopcorn'], [1, 'dPita Chips'], [1, 'fOrange Juice']],
     [[]],
-    [[1, 'Water']],
-    [[1, 'Popcorn'], [1, 'Orange Juice']],
-    [[1, 'M&Ms'], [1, 'Pita Chips'], [3, 'Orange Juice']]
+    [[1, 'cWater']],
+    [[1, 'bPopcorn'], [1, 'fOrange Juice']],
+    [[1, 'eM&Ms'], [1, 'dPita Chips'], [3, 'fOrange Juice']]
 ]
 
 count = 0
@@ -70,15 +70,15 @@ movie_frame = movie_frame.set_index('Name')
 # create column called 'Sub Total' fill it price for snacks and ticket
 
 movie_frame["Sub Total"] = \
-    movie_frame['Ticket'] + \
-    movie_frame['Popcorn']*price_dict['Popcorn'] + \
-    movie_frame['Water']*price_dict['Water'] + \
-    movie_frame['Pita Chips']*price_dict['Pita Chips'] + \
-    movie_frame['M&Ms']*price_dict['M&Ms'] + \
-    movie_frame['Orange Juice']*price_dict['Orange Juice']
+    movie_frame['aTicket'] + \
+    movie_frame['bPopcorn']*price_dict['bPopcorn'] + \
+    movie_frame['cWater']*price_dict['cWater'] + \
+    movie_frame['dPita Chips']*price_dict['dPita Chips'] + \
+    movie_frame['eM&Ms']*price_dict['eM&Ms'] + \
+    movie_frame['fOrange Juice']*price_dict['fOrange Juice']
 
 # Shorten column names
-movie_frame = movie_frame.rename(columns={'Orange Juice': 'OJ',
-                                          'Pita Chips': 'Chips'})
+movie_frame = movie_frame.rename(columns={'aTicket' : 'Ticket', 'fOrange Juice': 'OJ',
+'dPita Chips': 'Chips', 'bPopcorn' : 'Popcorn', 'cWater' : 'Water', 'eM&Ms': 'M&Ms'})
 
 print(movie_frame)
