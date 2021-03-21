@@ -1,6 +1,5 @@
 # import statements
-import re
-import pandas
+import pandas, re
 
 
 # functions go here
@@ -102,6 +101,68 @@ def get_ticket_price():
         ticket_price = 6.5
 
     return ticket_price
+
+# Gets snacks
+def get_snack():
+    # regular expression to find if item starts with a number
+    number_regex = "^[1-9]"
+
+    # valid snacks holds list of all snacks
+    # Each item in valid snacks is a list with valid options for each snack
+    # <full name, letter code (a - e), and possible abbreviations etc>
+    valid_snacks = [
+    ["popcorn", "p", "corn", "a"],
+    ["M&M's", "m&m's", "mms", "m", "b"],
+    ["pita chips", "chips", "pc", "pita", "c"],
+    ["water", "w", "d"],
+    ["orange juice", "oj", "o", "juice", "e"]
+    ]
+
+    # holds snack order for a single user
+    snack_order = []
+
+    desired_snack = ""
+    while desired_snack != "xxx":
+
+        snack_row = []
+
+        # ask user for desired snack and put it in lowercase
+        desired_snack = input("Snack: ").lower()
+
+        if desired_snack == "xxx":
+            return snack_order
+
+        # if item has a number, separate it into two (number / item)
+        if re.match(number_regex, desired_snack):
+            amount = int(desired_snack[0])
+            desired_snack = desired_snack[1:]
+
+        else:
+            amount = 1
+            desired_snack = desired_snack
+
+
+        # remove white space around snack
+        desired_snack = desired_snack.strip()
+
+        # check if snack is valid
+        snack_choice = string_check(desired_snack, valid_snacks)
+
+        # check snack amount is valid (less than 5)
+        if amount >= 5:
+            print("Sorry - we have a four snack maximum")
+            snack_choice = "invalid choice"
+
+        # add snack AND amount to list...
+
+        snack_row.append(amount)
+        snack_row.append(snack_choice)
+
+        # check that snack is not the exit code before adding
+        if snack_choice != "xxx" and snack_choice != "invalid choice":
+            snack_order.append(snack_row)
+
+
 # ----- Main Routine -----
 
 # dictionaries / lists
@@ -129,12 +190,15 @@ ticket_sales = 0
 # Initialise lists (to make data-frame in due course)
 all_names = []
 all_tickets = []
+
+# snack lists
 popcorn = []
 mms = []
 pita_chips = []
 water = []
 orange_juice = []
 
+snack_lists = [popcorn, mms, pita_chips, water, orange_juice]
 
 # Data Frame Dictionary
 movie_data_dict = {
@@ -187,7 +251,6 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
     all_tickets.append(ticket_price)
 
     # Get snacks
-
     # Get payment method (ie: work out if surcharge is needed)
     # Ask for payment method
     how_pay = "invalid choice"
