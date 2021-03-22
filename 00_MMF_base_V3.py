@@ -111,11 +111,11 @@ def get_snack():
     # Each item in valid snacks is a list with valid options for each snack
     # <full name, letter code (a - e), and possible abbreviations etc>
     valid_snacks = [
-    ["popcorn", "p", "corn", "a"],
-    ["M&M's", "m&m's", "mms", "m", "b"],
-    ["pita chips", "chips", "pc", "pita", "c"],
-    ["water", "w", "d"],
-    ["orange juice", "oj", "o", "juice", "e"]
+        ["popcorn", "p", "corn", "a"],
+        ["M&M's", "m&m's", "mms", "m", "b"],
+        ["pita chips", "chips", "pc", "pita", "c"],
+        ["water", "w", "d"],
+        ["orange juice", "oj", "o", "juice", "e"]
     ]
 
     # holds snack order for a single user
@@ -141,12 +141,12 @@ def get_snack():
             amount = 1
             desired_snack = desired_snack
 
-
         # remove white space around snack
         desired_snack = desired_snack.strip()
 
         # check if snack is valid
         snack_choice = string_check(desired_snack, valid_snacks)
+        '''print("Snack Choice: ", snack_choice)'''
 
         # check snack amount is valid (less than 5)
         if amount >= 5:
@@ -200,6 +200,8 @@ orange_juice = []
 
 snack_lists = [popcorn, mms, pita_chips, water, orange_juice]
 
+# store surcharge multiplier
+surcharge_multi_list = []
 # Data Frame Dictionary
 movie_data_dict = {
     'Name': all_names,
@@ -209,6 +211,7 @@ movie_data_dict = {
     'Pita Chips': pita_chips,
     'M&Ms': mms,
     'Orange Juice': orange_juice,
+    'Surcharge_Multiplier' : surcharge_multi_list
 }
 
 # cost of each snack
@@ -251,6 +254,30 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
     all_tickets.append(ticket_price)
 
     # Get snacks
+    # ask user if they want a snack
+    check_snack = "invalid choice"
+    while check_snack == "invalid choice":
+        want_snack = input("Do you want to order snacks? ").lower()
+        check_snack = string_check(want_snack, yes_no)
+
+    # If they say yes, ask what snacks they want (and add to snack list)
+    if check_snack == "Yes":
+        snack_order = get_snack()
+
+    else:
+        snack_order = []
+
+    # Assume no snacks have been bought
+    for item in snack_lists:
+        item.append(0)
+
+    for item in snack_order:
+        if len(item) > 0:
+            to_find = (item[1])
+            amount = (item[0])
+            add_list = movie_data_dict[to_find]
+            add_list[-1] = amount
+
     # Get payment method (ie: work out if surcharge is needed)
     # Ask for payment method
     how_pay = "invalid choice"
@@ -261,13 +288,32 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
     if how_pay == "Credit":
         surcharge_multiplier = 0.05
     else:
-        surcharge = 0
+        surcharge_multiplier = 0
+
+    surcharge_multi_list.append(surcharge_multiplier)
 
 # End of tickets loop / snacks / payment loop
 
 # print details
+# Create dataframe and set index to name column
 movie_frame = pandas.DataFrame(movie_data_dict)
-print(movie_frame)
+movie_frame = movie_frame.set_indexz('Name')
+
+# create column called 'Sub Total'
+# fill it price for snacks and ticket
+movie_frame["Sub Total"] = \
+    movie_frame['aTicket'] + \
+    movie_frame['bPopcorn']*price_dict['bPopcorn'] + \
+    movie_frame['cWater']*price_dict['cWater'] + \
+    movie_frame['dPita Chips']*price_dict['dPita Chips'] + \
+    movie_frame['eM&Ms']*price_dict['eM&Ms'] + \
+    movie_frame['fOrange Juice']*price_dict['fOrange Juice']
+
+movie_frame["surcharge"] = \
+    movie_frame["Sub Total"] * movie_frame["Surcharge_Multiplier"]
+
+movie_frame["Total"] = movie_frame["Sub Total"] + \
+    movie_frame['Surcharge']
 
 # Calculate ticket profit
 ticket_profit = ticket_sales - (5 * ticket_count)
