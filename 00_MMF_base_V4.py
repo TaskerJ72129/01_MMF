@@ -202,6 +202,13 @@ snack_lists = [popcorn, mms, pita_chips, water, orange_juice]
 
 # store surcharge multiplier
 surcharge_multi_list = []
+
+# Lists to store summary data
+summary_headings = ["Bpopcorn", "Em&Ms", "Dpita Chips", "Cwater",
+                    "Forange Juice", "Snack Profit", "Ticket Profit", "Total Profit"]
+
+summary_data = []
+
 # Data Frame Dictionary
 movie_data_dict = {
     'Name': all_names,
@@ -212,6 +219,12 @@ movie_data_dict = {
     'Em&Ms': mms,
     'Forange Juice': orange_juice,
     'GSurcharge_Multiplier' : surcharge_multi_list
+}
+
+# Summary Dictionary
+summary_data_dict = {
+    'Item': summary_headings,
+    'Amount': summary_data
 }
 
 # cost of each snack
@@ -320,6 +333,28 @@ movie_frame = movie_frame.rename(columns={'Aticket' : 'Ticket', 'Forange Juice':
 'Dpita Chips': 'Chips', 'Bpopcorn' : 'Popcorn', 'Cwater' : 'Water', 'Em&Ms': 'M&Ms',
                                           'GSurcharge_Multiplier' : 'SM'})
 
+# set up summary dataframe
+# populate snack items
+for item in snack_lists:
+    # sum items in each snack list
+    summary_data.append(sum(item))
+
+# Get snack profit
+# Get snack total from panda
+snack_total = movie_frame['Snacks'].sum()
+snack_profit = snack_total * 0.2
+summary_data.append(snack_profit)
+
+# Calculate ticket profit
+ticket_profit = ticket_sales - (5 * ticket_count)
+summary_data.append(ticket_profit)
+
+# work out total profit and add to list
+total_profit = snack_profit + ticket_profit
+summary_data.append(total_profit)
+
+
+
 # Set up columns to be printed
 pandas.set_option('display.max_columns', None)
 
@@ -333,10 +368,6 @@ else:
     print(movie_frame[['Ticket', 'Sub Total', 'Surcharge', 'Total']])
 
 print()
-
-# Calculate ticket profit
-ticket_profit = ticket_sales - (5 * ticket_count)
-print("Ticket profit: ${:.2f}".format(ticket_profit))
 
 # Tell user if they have unsold tickets
 if ticket_count == MAX_TICKETS:
