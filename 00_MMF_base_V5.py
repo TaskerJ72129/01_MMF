@@ -113,8 +113,8 @@ def get_snack():
     # Each item in valid snacks is a list with valid options for each snack
     # <full name, letter code (a - e), and possible abbreviations etc>
     valid_snacks = [
-        ["Popcorn", "popcorn", "p", "corn", "a"],
-        ["M&Ms", "M&m's", "m&m's", "mms", "m", "b"],
+        ["Popcorn", "popcorn", "pop", "p", "corn", "a"],
+        ["M&Ms", "M&m's", "m&m's", "mms", "mnm", "m", "b"],
         ["Pita Chips", "pita chips", "chips", "pc", "pita", "c"],
         ["Water", "water", "w", "d"],
         ["Orange Juice", "orange juice", "oj", "o", "juice", "e"]
@@ -183,7 +183,7 @@ pay_method = [
 # used program before?
 
 # loop
-MAX_TICKETS = 3
+MAX_TICKETS = 5
 
 name = ""
 ticket_count = 0
@@ -317,7 +317,6 @@ movie_frame = movie_frame.set_index('Name')
 # create column called 'Sub Total'
 # fill it price for snacks and ticket
 movie_frame["Snacks"] = \
-    movie_frame['Ticket'] + \
     movie_frame['Popcorn']*price_dict['Popcorn'] + \
     movie_frame['Water']*price_dict['Water'] + \
     movie_frame['Pita Chips']*price_dict['Pita Chips'] + \
@@ -374,6 +373,12 @@ print("note")
 print()
 print(movie_frame[['Ticket', 'Snacks', 'Sub Total', 'Surcharge', 'Total']])
 print()
+
+print()
+
+print("*** Snack / Profit Summary ***")
+print()
+print(summary_frame)
 
 # Tell user if they have unsold tickets
 if ticket_count == MAX_TICKETS:
