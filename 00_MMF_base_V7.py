@@ -31,6 +31,7 @@ def string_check(choice, options):
         return "invalid choice"
 
 
+# function to show instructions if necessary
 def instructions(options):
     show_help = "invalid choice"
     while show_help == "invalid choice":
