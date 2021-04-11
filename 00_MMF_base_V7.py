@@ -411,7 +411,7 @@ print()
 
 print("*** Snack / Profit Summary ***")
 print()
-print(summary_frame)
+print(summary_frame) 
 
 # Tell user if they have unsold tickets
 if ticket_count == MAX_TICKETS:
