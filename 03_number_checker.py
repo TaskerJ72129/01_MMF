@@ -22,5 +22,6 @@ def int_check(question, low_num, high_num):
         except ValueError:
             print(error)
 
+
 # main routine
 age = int_check("Age: ", 12, 130)
