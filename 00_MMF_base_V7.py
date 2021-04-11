@@ -31,6 +31,20 @@ def string_check(choice, options):
         return "invalid choice"
 
 
+def instructions(options):
+    show_help = "invalid choice"
+    while show_help == "invalid choice":
+        show_help = input("Would you like to read the instructions? ")
+        show_help = string_check(show_help, options)
+
+    if show_help == "Yes":
+        print()
+        print("**** Mega Movie Fundraiser Instructions ****")
+        print("instructions go here")
+        print()
+
+    return ""
+
 # checks that ticket name is not blank
 def not_blank(question):
     valid = False
@@ -166,6 +180,11 @@ def get_snack():
             snack_order.append(snack_row)
 
 
+# currency formatting function
+def currency(x):
+    return "${:.2f}".format(x)
+
+
 # ----- Main Routine -----
 
 # dictionaries / lists
@@ -241,6 +260,7 @@ price_dict = {
 }
 
 # Ask user if they have used program before & show instructions
+instructions(yes_no)
 
 # Loop to get ticket details
 while name != "xxx" and ticket_count < MAX_TICKETS:
@@ -262,7 +282,7 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
     # if age is invalid, restart loop (and get name again
     if ticket_price == "invalid ticket price":
         continue
-    
+
     ticket_count += 1
     ticket_sales += ticket_price
 
@@ -319,11 +339,11 @@ movie_frame = movie_frame.set_index('Name')
 # create column called 'Sub Total'
 # fill it price for snacks and ticket
 movie_frame["Snacks"] = \
-    movie_frame['Popcorn']*price_dict['Popcorn'] + \
-    movie_frame['Water']*price_dict['Water'] + \
-    movie_frame['Pita Chips']*price_dict['Pita Chips'] + \
-    movie_frame['M&Ms']*price_dict['M&Ms'] + \
-    movie_frame['Orange Juice']*price_dict['Orange Juice']
+    movie_frame['Popcorn'] * price_dict['Popcorn'] + \
+    movie_frame['Water'] * price_dict['Water'] + \
+    movie_frame['Pita Chips'] * price_dict['Pita Chips'] + \
+    movie_frame['M&Ms'] * price_dict['M&Ms'] + \
+    movie_frame['Orange Juice'] * price_dict['Orange Juice']
 
 movie_frame["Sub Total"] = \
     movie_frame['Ticket'] + \
@@ -346,19 +366,20 @@ for item in snack_lists:
     # sum items in each snack list
     summary_data.append(sum(item))
 
-# Get snack profita
+# Get snack profit
 # Get snack total from panda
 snack_total = movie_frame['Snacks'].sum()
 snack_profit = snack_total * 0.2
-summary_data.append(snack_profit)
 
-# Calculate ticket profit
+# Calculate ticket profit & total profit
 ticket_profit = ticket_sales - (5 * ticket_count)
-summary_data.append(ticket_profit)
-
-# work out total profit and add to list
 total_profit = snack_profit + ticket_profit
-summary_data.append(total_profit)
+
+# format dollar amounts and add to list...
+dollar_amounts = [snack_profit, ticket_profit, total_profit]
+for item in dollar_amounts:
+    item = "${:.2f}".format(item)
+    summary_data.append(item)
 
 # Create summary frame
 summary_frame = pandas.DataFrame(summary_data_dict)
@@ -367,12 +388,21 @@ summary_frame = summary_frame.set_index('Item')
 # Set up columns to be printed
 pandas.set_option('display.max_columns', None)
 
-# Display numbers to 2 dp
-pandas.set_option('precision', 2)
+# *** Pre Printing / export ***
+# Format currency value so they have $'s
+
+# Ticket Details Formatting (uses currency function)
+add_dollars = ['Ticket', 'Snacks', 'Surcharge', 'Total', 'Sub Total']
+for item in add_dollars:
+    movie_frame[item] = movie_frame[item].apply(currency)
+
+# Write each frame to a separate csv files
+movie_frame[['Ticket', 'Popcorn', 'Water', 'Chips', 'M&Ms', 'OJ', 'SM', 'Snacks', 'Sub Total', 'Surcharge', 'Total']].to_csv("ticket_details.csv")
+summary_frame.to_csv("snack_summary.csv")
 
 print()
 print("*** Ticket / Snack Information ***")
-print("note")
+print("Note: for full details, please see the excel file called ticket_details.csv")
 print()
 print(movie_frame[['Ticket', 'Snacks', 'Sub Total', 'Surcharge', 'Total']])
 print()

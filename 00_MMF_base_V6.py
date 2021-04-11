@@ -1,5 +1,6 @@
 # import statements
-import pandas, re
+import pandas
+import re
 
 
 # functions go here
@@ -164,9 +165,11 @@ def get_snack():
         if snack_choice != "xxx" and snack_choice != "invalid choice":
             snack_order.append(snack_row)
 
+
 # currency formatting function
 def currency(x):
     return "${:.2f}".format(x)
+
 
 # ----- Main Routine -----
 
@@ -210,7 +213,8 @@ surcharge_multi_list = []
 
 # Lists to store summary data
 summary_headings = ["Popcorn", "M&Ms", "Pita Chips", "Water",
-                    "Orange Juice", "Snack Profit", "Ticket Profit", "Total Profit"]
+                    "Orange Juice", "Snack Profit", "Ticket Profit",
+                    "Total Profit"]
 
 summary_data = []
 
@@ -223,7 +227,7 @@ movie_data_dict = {
     'Pita Chips': pita_chips,
     'M&Ms': mms,
     'Orange Juice': orange_juice,
-    'Surcharge_Multiplier' : surcharge_multi_list
+    'Surcharge_Multiplier': surcharge_multi_list
 }
 
 # Summary Dictionary
@@ -263,7 +267,7 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
     # if age is invalid, restart loop (and get name again
     if ticket_price == "invalid ticket price":
         continue
-    
+
     ticket_count += 1
     ticket_sales += ticket_price
 
@@ -320,11 +324,11 @@ movie_frame = movie_frame.set_index('Name')
 # create column called 'Sub Total'
 # fill it price for snacks and ticket
 movie_frame["Snacks"] = \
-    movie_frame['Popcorn']*price_dict['Popcorn'] + \
-    movie_frame['Water']*price_dict['Water'] + \
-    movie_frame['Pita Chips']*price_dict['Pita Chips'] + \
-    movie_frame['M&Ms']*price_dict['M&Ms'] + \
-    movie_frame['Orange Juice']*price_dict['Orange Juice']
+    movie_frame['Popcorn'] * price_dict['Popcorn'] + \
+    movie_frame['Water'] * price_dict['Water'] + \
+    movie_frame['Pita Chips'] * price_dict['Pita Chips'] + \
+    movie_frame['M&Ms'] * price_dict['M&Ms'] + \
+    movie_frame['Orange Juice'] * price_dict['Orange Juice']
 
 movie_frame["Sub Total"] = \
     movie_frame['Ticket'] + \
@@ -338,7 +342,8 @@ movie_frame["Total"] = movie_frame["Sub Total"] + \
 
 # Shorten column names
 movie_frame = movie_frame.rename(columns={'Orange Juice': 'OJ',
-'Pita Chips': 'Chips', 'Surcharge_Multiplier' : 'SM'})
+                                          'Pita Chips': 'Chips',
+                                          'Surcharge_Multiplier': 'SM'})
 
 # set up summary dataframe
 # populate snack items
@@ -346,7 +351,7 @@ for item in snack_lists:
     # sum items in each snack list
     summary_data.append(sum(item))
 
-# Get snack profita
+# Get snack profit
 # Get snack total from panda
 snack_total = movie_frame['Snacks'].sum()
 snack_profit = snack_total * 0.2
@@ -357,10 +362,9 @@ total_profit = snack_profit + ticket_profit
 
 # format dollar amounts and add to list...
 dollar_amounts = [snack_profit, ticket_profit, total_profit]
-for itme in dollar_amounts:
+for item in dollar_amounts:
     item = "${:.2f}".format(item)
     summary_data.append(item)
-    
 
 # Create summary frame
 summary_frame = pandas.DataFrame(summary_data_dict)
@@ -379,10 +383,11 @@ for item in add_dollars:
 
 # Write each frame to a separate csv files
 movie_frame.to_csv("ticket_details.csv")
+summary_frame.to_csv("snack_summary.csv")
 
 print()
 print("*** Ticket / Snack Information ***")
-print("note")
+print("Note: for full details, please see the excel file called ticket_details.csv")
 print()
 print(movie_frame[['Ticket', 'Snacks', 'Sub Total', 'Surcharge', 'Total']])
 print()
