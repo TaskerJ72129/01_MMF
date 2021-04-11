@@ -261,8 +261,6 @@ price_dict = {
 
 # Ask user if they have used program before & show instructions
 instructions(yes_no)
-print()
-print("Program launches...")
 
 # Loop to get ticket details
 while name != "xxx" and ticket_count < MAX_TICKETS:
