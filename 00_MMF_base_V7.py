@@ -204,7 +204,7 @@ pay_method = [
 # used program before?
 
 # loop
-MAX_TICKETS = 5
+MAX_TICKETS = 9
 
 name = ""
 ticket_count = 0
